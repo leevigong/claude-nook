@@ -1,0 +1,36 @@
+{
+  "name": "claude-nook",
+  "version": "0.1.0",
+  "description": "Visual web dashboard for managing Claude Code settings across projects",
+  "type": "module",
+  "bin": {
+    "claude-nook": "./bin/claude-nook.mjs"
+  },
+  "main": "./lib/server.mjs",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "bin/",
+    "lib/",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "claude",
+    "claude-code",
+    "dashboard",
+    "settings",
+    "plugins",
+    "mcp",
+    "developer-tools",
+    "cli"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/daeunisnn/claude-nook"
+  },
+  "homepage": "https://github.com/daeunisnn/claude-nook#readme"
+}

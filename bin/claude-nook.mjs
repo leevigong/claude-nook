@@ -1,6 +1,16 @@
 #!/usr/bin/env node
 
 import { startServer } from '../lib/server.mjs';
+import updateNotifier from 'update-notifier';
+import { readFileSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
+import { dirname, join } from 'node:path';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const pkg = JSON.parse(readFileSync(join(__dirname, '..', 'package.json'), 'utf8'));
+
+// Check for updates once a day, print a box on next run when one is available.
+updateNotifier({ pkg, updateCheckInterval: 1000 * 60 * 60 * 24 }).notify();
 
 const args = process.argv.slice(2);
 
@@ -21,11 +31,6 @@ if (args.includes('--help') || args.includes('-h')) {
 }
 
 if (args.includes('--version') || args.includes('-v')) {
-  const { readFileSync } = await import('node:fs');
-  const { fileURLToPath } = await import('node:url');
-  const { join, dirname } = await import('node:path');
-  const __dirname = dirname(fileURLToPath(import.meta.url));
-  const pkg = JSON.parse(readFileSync(join(__dirname, '..', 'package.json'), 'utf8'));
   console.log(pkg.version);
   process.exit(0);
 }

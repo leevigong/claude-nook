@@ -12,7 +12,7 @@ if (args.includes('--help') || args.includes('-h')) {
     claude-nook [options]
 
   Options:
-    --port <number>   Port to serve on (default: 3300)
+    --port <number>   Port to serve on (default: 7007)
     --no-open         Don't auto-open browser
     -h, --help        Show this help message
     -v, --version     Show version
@@ -31,7 +31,7 @@ if (args.includes('--version') || args.includes('-v')) {
 }
 
 const portIdx = args.indexOf('--port');
-const port = portIdx !== -1 ? parseInt(args[portIdx + 1], 10) : 3300;
+const port = portIdx !== -1 ? parseInt(args[portIdx + 1], 10) : 7007;
 const noOpen = args.includes('--no-open');
 
 startServer({ port, open: !noOpen });

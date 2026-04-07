@@ -1,11 +1,23 @@
 # claude-nook 🪺
 
-프로젝트마다 흩어진 Claude Code 설정을 한눈에 보는 **로컬 대시보드**예요.
+프로젝트마다 흩어진 Claude Code 설정을 한눈에 보는 **로컬 대시보드**예요.   
+</br>
+
+> **빠른 설치 및 실행**                                                                                                   
+>                                                                                                                     
+> ```bash                                                                                                             
+> npm install -g claude-nook && claude-nook                                                                           
+> ``` 
+
+
+<img width="1505" height="899" alt="image" src="https://github.com/user-attachments/assets/4d4fbaad-61ae-490d-ba66-831165da3e58" />
+
+
 
 
 <br />
 
-## 왜 만들었나요?
+## 왜 만들었을까?
 
 ### 혹시 프로젝트마다 Claude Code 설정이 다 다르지 않으세요?
 

@@ -37,6 +37,7 @@
 - **Hooks 뷰**: SessionStart, UserPromptSubmit, Stop 등 이벤트별로 어떤 command가 걸려 있는지 한눈에 볼 수 있어요.
 - **MCP Servers 뷰**: 같은 이름의 서버를 묶어서 어떤 프로젝트들에 연결되어 있는지 한 번에 보여드려요.
 - **Scope 색상 구분**: ![user](https://img.shields.io/badge/user-8b5cf6) ![project](https://img.shields.io/badge/project-3b82f6) ![local](https://img.shields.io/badge/local-f97316) 으로 구분해서 어느 scope에 걸려 있는지 바로 알 수 있어요.
+- **Agents / Skills / Commands 뷰**: 프로젝트별 서브에이전트, 스킬, 슬래시 커맨드도 탭으로 확인할 수 있어요.
 
 <br />
 
@@ -55,15 +56,32 @@ npm install -g claude-nook
 브라우저가 `http://localhost:7007` 으로 알아서 열려요.
 
 ```bash
-# 대시보드 실행
+# 대시보드 실행 (Ctrl+C로 종료)
 claude-nook
 
-# 포트 바꾸고 싶으면
-claude-nook --port 8080
+# 백그라운드로 실행
+claude-nook -d
 
-# 브라우저가 자동으로 안 뜨게
+# 포트 바꾸기
+claude-nook -p 8080
+
+# 브라우저 자동 오픈 끄기
 claude-nook --no-open
 ```
+
+### 상태 확인 / 종료
+
+```bash
+# 현재 떠있는 인스턴스 확인
+claude-nook status
+
+# 종료 (여러 개면 선택지가 떠요)
+claude-nook stop
+```
+
+<br />
+
+> 💡 macOS에서 `~/Documents`나 `~/Downloads` 아래 프로젝트가 안 보이거나 토글이 안 되면, **시스템 설정 → 개인정보 보호 및 보안 → 파일 및 폴더** 에서 터미널에 접근 권한을 허용해주세요.
 
 <br />
 

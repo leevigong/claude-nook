@@ -33,7 +33,5 @@
     "url": "git+https://github.com/leevigong/claude-nook.git"
   },
   "homepage": "https://github.com/leevigong/claude-nook#readme",
-  "dependencies": {
-    "update-notifier": "^7.3.1"
-  }
+  "dependencies": {}
 }

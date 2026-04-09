@@ -3,7 +3,6 @@
 import { startServer, readPidFile, listRunningInstances, openBrowser } from '../lib/server.mjs';
 import { createInterface } from 'node:readline';
 import { spawn } from 'node:child_process';
-import updateNotifier from 'update-notifier';
 import { readFileSync, openSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { fileURLToPath } from 'node:url';
@@ -11,9 +10,6 @@ import { dirname, join } from 'node:path';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const pkg = JSON.parse(readFileSync(join(__dirname, '..', 'package.json'), 'utf8'));
-
-// Check for updates once a day, print a box on next run when one is available.
-updateNotifier({ pkg, updateCheckInterval: 1000 * 60 * 60 * 24 }).notify();
 
 // ANSI colors (disabled if NO_COLOR env or not a TTY)
 const useColor = process.stdout.isTTY && !process.env.NO_COLOR;

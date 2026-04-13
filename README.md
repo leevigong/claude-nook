@@ -37,7 +37,9 @@
 - **Hooks 뷰**: SessionStart, UserPromptSubmit, Stop 등 이벤트별로 어떤 command가 걸려 있는지 한눈에 볼 수 있어요.
 - **MCP Servers 뷰**: 같은 이름의 서버를 묶어서 어떤 프로젝트들에 연결되어 있는지 한 번에 보여드려요.
 - **Scope 색상 구분**: ![user](https://img.shields.io/badge/user-8b5cf6) ![project](https://img.shields.io/badge/project-3b82f6) ![local](https://img.shields.io/badge/local-f97316) 으로 구분해서 어느 scope에 걸려 있는지 바로 알 수 있어요.
+- **Permissions 뷰**: 도구 허용/차단 규칙을 scope별로 확인하고, 유출된 자격증명을 자동 탐지해줘요.
 - **Agents / Skills / Commands 뷰**: 프로젝트별 서브에이전트, 스킬, 슬래시 커맨드도 탭으로 확인할 수 있어요.
+- **Help 페이지**: 각 메뉴가 뭘 하는지 한눈에 설명해줘요. 처음 쓰는 분도 바로 이해할 수 있어요.
 
 <br />
 
